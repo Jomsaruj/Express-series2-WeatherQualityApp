@@ -35,7 +35,7 @@ app.listen(8000, function(){
 
 ### How to extract particular value from JSON data
 
-At this point once you get data from the web. It will present to you as a JSON format. Now, we're going to extract only some value out from that chunk of JSON data such as PM2.5, CO, PM10.
+At this point once you get data from the web. It will present to you as a JSON format. Now, we're going to extract only some value out from that chunk of JSON data such as PM2.5, co, PM10, o3.
 
 1. modify this method to look like this
 
