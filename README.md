@@ -1,5 +1,5 @@
 # Weather Quality Application
-Here is my first web application develop using ExpressJS. The main objective of this project is to fetch information about weather quality from https://aqicn.org/ and process it. Then, display the result to the user. Moreover, user can select city that they want to see.
+Here is my first web application develop using ExpressJS. The main objective of this project is to learn how to fetch information about weather quality from https://aqicn.org/. Then, display the result to the user. Moreover, user can select city that they want to see.
 
 ### How to fecth data from a particular endpoint
 
