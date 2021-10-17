@@ -50,6 +50,9 @@ app.get("/", function(req,res){
             const pm10 = weatherData.data.iaqi.pm10.v
             const o3 = weatherData.data.iaqi.o3.v
             const co = weatherData.data.iaqi.co.v
+	    
+	    // this part is just for printing
+	    
             res.write("<p>City name : " + city + "<p>")
             res.write("<p>pm25 : " + pm25+ "<p>")
             res.write("<p>pm10 : " + pm10+ "<p>")
