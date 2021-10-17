@@ -5,9 +5,9 @@ Here is my first web application develop using ExpressJS. The main objective of 
 
 In this case we will fetch data from: https://api.waqi.info/feed/shanghai/?token=demo
 
-NOTE: As you can see parameter token has value "demo", If you want actual result please register to get your own token key. Anyway "demo" token will do for now, if you just want to learn how to fecth data from web
+NOTE1: As you can see parameter token has value "demo", If you want actual result please register to get your own token key. Anyway "demo" token will do for now, if you just want to learn how to fecth data from web or you can get your token from https://aqicn.org/data-platform/token/#/
 
-NOTE: you can start with only empty app.js in your directory and run ```npm init``` and ```npm i express``` (already mentioned in part 1)
+NOTE2: you can start with only empty app.js in your directory and run ```npm init``` and ```npm i express``` (already mentioned in part 1)
 1. add this code to app.js
 
 ```
