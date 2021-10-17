@@ -3,6 +3,6 @@ Here is my first web application develop using ExpressJS. The main objective of 
 
 ### How to fecth data from a particular endpoint
 
-In this case we will fetch data from: https://api.waqi.info/feed/beijing/?token=demo
+In this case we will fetch data from: https://api.waqi.info/feed/shanghai/?token=demo
 
 NOTE: As you can see parameter token has value "demo", please register to get your own token key.
