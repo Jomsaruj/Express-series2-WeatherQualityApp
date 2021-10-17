@@ -5,4 +5,4 @@ Here is my first web application develop using ExpressJS. The main objective of 
 
 In this case we will fetch data from: https://api.waqi.info/feed/shanghai/?token=demo
 
-NOTE: As you can see parameter token has value "demo", please register to get your own token key.
+NOTE: As you can see parameter token has value "demo", If you want actual result please register to get your own token key. Anyway "demo" token will do for now, if you just want to learn how to fecth data from web
