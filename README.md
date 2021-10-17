@@ -67,3 +67,61 @@ app.get("/", function(req,res){
 ### How to handle POST request from user
 
 At this point API key "demo" will not work any more because we're going to let user select city that user want to see and query only that particular city. Demo key will not allow you to do that. It only allow you to query information from Shianghai, China. Therefore, you need to have your own API key, which you can get it from https://aqicn.org/data-platform/token/#/ but if you do not want to do that you can just see how application work from Youtube video above. 
+
+1. create a form page where user can enter city name - index.html
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherQualityApp</title>
+</head>
+<body>
+    <form action="/" method="post">
+        <label for="cityname">Enter your city name: </label>
+        <input id="cityname" type="text" name="city">
+        <button type="submit">Enter</button>
+    </form>
+</body>
+</html>
+```
+2. modify app.js to look like this
+
+```
+const express = require("express");
+const https = require("https");
+const bodyParser = require("body-parser");
+const app = express();
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.get("/", function(req,res){
+    res.sendFile(__dirname + "/index.html")
+})
+
+app.post("/", function(req,res){
+    const cityname = req.body.city
+    url = "https://api.waqi.info/feed/"+ cityname +"/?token={YOUR_TOKEN:)} ";
+    https.get(url, function(response){
+        response.on("data", function(data){
+            const weatherData = JSON.parse(data)
+            const city = weatherData.data.city.name
+            const pm25 = weatherData.data.iaqi.pm25.v
+            const pm10 = weatherData.data.iaqi.pm10.v
+            const o3 = weatherData.data.iaqi.o3.v
+            const co = weatherData.data.iaqi.co.v
+            res.write("<p>City name : " + city + "<p>")
+            res.write("<p>pm25 : " + pm25+ "<p>")
+            res.write("<p>pm10 : " + pm10+ "<p>")
+            res.write("<p>o3 : " + o3+ "<p>")
+            res.write("<p>co : " + co+ "<p>")
+            res.send()
+        })
+    })
+})
+
+app.listen(8000, function(){
+	console.log("Server started on port 8000");
+});
+```
