@@ -29,3 +29,10 @@ app.listen(8000, function(){
 });
 
 ```
+2. run command node app.js
+3. open localhost:8000
+4. In your terminal you will see data that you have GET from the website
+
+### How to extract particular value from JSON data
+
+At this point once you get data from the web. It will present to you as a JSON format. Now, we're going to extract only some value out from that chunk of JSON data such as PM2.5, CO, PM10.
