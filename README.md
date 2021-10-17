@@ -54,3 +54,7 @@ app.get("/", function(req,res){
     })
 })
 ```
+
+### How to handle POST request from user
+
+At this point API key "demo" will not work any more because we're going to let user select city that user want to see and query only that particular city. Demo key will not allow you to do that. It only allow you to query information from Shianghai, China. Therefore, you need to have your own API key, which you can get it from https://aqicn.org/data-platform/token/#/ but if you do not want to do that you can just see how application work from Youtube video above. 
