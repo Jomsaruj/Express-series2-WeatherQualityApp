@@ -45,6 +45,7 @@ app.get("/", function(req,res){
     https.get(url, function(response){
         response.on("data", function(data){
             const weatherData = JSON.parse(data)
+	    const city = weatherData.data.city.name
             const pm25 = weatherData.data.iaqi.pm25.v
             const pm10 = weatherData.iaqi.pm10.v
             const o3 = weatherData.iaqi.o3.v
