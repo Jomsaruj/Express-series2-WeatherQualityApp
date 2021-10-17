@@ -87,7 +87,8 @@ At this point API key "demo" will not work any more because we're going to let u
 </body>
 </html>
 ```
-2. modify app.js to look like this
+2. Open terminal and run ``` npm i body-parser ```
+3. modify app.js to look like this
 
 ```
 const express = require("express");
@@ -125,4 +126,4 @@ app.listen(8000, function(){
 	console.log("Server started on port 8000");
 });
 ```
-3. Style it as you like
+4. Style it as you like
