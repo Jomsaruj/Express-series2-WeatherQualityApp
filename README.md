@@ -130,4 +130,4 @@ app.listen(8000, function(){
 4. Style it as you like
 
 At this point you already know how to fetching data and process it from the particular end-point. Next, you will learn how to writing some unittest using JEST
-see more, [JS-series-JavaScript unit testing with JEST](https://github.com/Jomsaruj/JS-series3-JEST)
+see more, [JS-series-JavaScript Testing with JEST and Cucumber](https://github.com/Jomsaruj/JS-series3-Testing)
