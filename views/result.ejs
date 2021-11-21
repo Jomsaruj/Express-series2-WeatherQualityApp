@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%= cityname %>
+</body>
+</html> -->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Pricing example for Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="result.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+      <h1 class="display-4" style="margin-top: 4%;"><%= cityname %></h1>
+      <h3 class="display-5" style="font-weight: 300; margin-bottom: 2%;">Report at <%= time %></h3>
+      <p class="lead">Air Quality Data provided by the Division of Air Quality Data, Air Quality and Noise Management Bureau, Pollution Control Department</p>
+    </div>
+
+    <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">PM 2.5</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><%= pm25 %></h1>
+            <% if (parseFloat(pm25) > 70){ %>
+              <img src="image/bad.jpg" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">Bad for your body!</h4>
+            <% } else if (parseFloat(pm25) <= 70 && parseFloat(pm25) > 40){ %>
+              <img src="image/ok.jpg" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">OK for your body!</h4>
+            <% } else { %>
+              <img src="image/good.png" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">Good for your body!</h4>
+            <% }%>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">PM 10</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><%= pm10 %></h1>
+            <% if (parseFloat(pm10) > 70){ %>
+              <img src="image/bad.jpg" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">Bad for your body!</h4>
+            <% } else if (parseFloat(pm10) <= 70 && parseFloat(CO) > 40){ %>
+              <img src="image/ok.jpg" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">OK for your body!</h4>
+            <% } else { %>
+              <img src="image/good.png" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">Good for your body!</h4>
+            <% }%>
+          </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">CO</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title"><%= CO %></h1>
+            <% if (parseFloat(CO) > 0.7){ %>
+              <img src="image/bad.jpg" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">Bad for your body!</h4>
+            <% } else if (parseFloat(CO) <= 0.7 && parseFloat(CO) > 0.4){ %>
+              <img src="image/ok.jpg" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">OK for your body!</h4>
+            <% } else { %>
+              <img src="image/good.png" width="72" height="72" >
+              <h4 style="font-weight: 300; margin-top: 8%;">Good for your body!</h4>
+            <% }%>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form action="/" method="get">
+    <button type="submit" class="btn btn-danger" style="width: 50%; margin-left: 25%;">Back</button>
+    </form>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script>
+      Holder.addTheme('thumb', {
+        bg: '#55595c',
+        fg: '#eceeef',
+        text: 'Thumbnail'
+      });
+    </script>
+  </body>
+</html>
